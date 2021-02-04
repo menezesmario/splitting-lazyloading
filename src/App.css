@@ -1,31 +1,35 @@
 .App {
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: #3df53d;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite .001s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
+  color: rgb(71, 236, 38);
+  }
 
 .App-link {
-  color: #61dafb;
+  color: #37e8ff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {
