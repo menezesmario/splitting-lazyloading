@@ -5,6 +5,7 @@ import { lazy, Suspense } from 'react';
 
 // import Slogan from './Slogan';
 // import Rodape from './Rodape';
+// const logo = lazy(() => import ('./logo.svg'))
 
 const Slogan = lazy(() => import ('./Slogan'));
 const Rodape = lazy(() => import ('./Rodape'));
