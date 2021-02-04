@@ -1,8 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 
-import Slogan from './Slogan';
-import Rodape from './Rodape';
+import { lazy, Suspense } from 'react';
+
+// import Slogan from './Slogan';
+// import Rodape from './Rodape';
+
+const Slogan = lazy(() => import ('./Slogan'));
+const Rodape = lazy(() => import ('./Rodape'));
 
 function App() {
   return (
@@ -10,9 +15,13 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         
-        <Slogan />
-        
-        <Rodape />
+        <Suspense fallback={ <p>Carregando...</p>}>
+          <Slogan />
+        </Suspense>
+        <Suspense fallback={ <p>Carregando...</p> }>
+          <Rodape />
+        </Suspense>
+          
                 
       </header>
     </div>
